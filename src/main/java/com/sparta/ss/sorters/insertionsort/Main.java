@@ -1,4 +1,4 @@
-package com.sparta.ss.quicksort;
+package com.sparta.ss.sorters.insertionsort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -13,9 +13,8 @@ public class Main {
         for (int i = 0; i < scanned; i++) {
             numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
         }
-        int len = numbers.length;
         System.out.println(Arrays.toString(numbers));
-        int[] finalArray = QuickSort.quickSortArray(numbers, 0, len - 1);
+        int[] finalArray = InsertionSort.sortArray(numbers);
         System.out.println(Arrays.toString(finalArray));
     }
 }

@@ -1,4 +1,4 @@
-package com.sparta.ss.insertionsort;
+package com.sparta.ss.sorters.insertionsort;
 
 public class InsertionSort {
     public static int[] sortArray(int[] numbers) {

@@ -1,5 +1,6 @@
 package com.sparta.ss.mergesort;
 
+import com.sparta.ss.sorters.mergesort.SplitArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

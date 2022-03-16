@@ -1,4 +1,4 @@
-package com.sparta.ss.quicksort;
+package com.sparta.ss.sorters.quicksort;
 
 public class QuickSort {
     public static int[] quickSortArray(int[] numbers, int min, int max) {

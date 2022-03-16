@@ -1,4 +1,4 @@
-package com.sparta.ss.insertionsort;
+package com.sparta.ss.sorters.mergesort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -14,7 +14,7 @@ public class Main {
             numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
         }
         System.out.println(Arrays.toString(numbers));
-        int[] finalArray = InsertionSort.sortArray(numbers);
+        int[] finalArray = SplitArray.splitMergeSort(numbers);
         System.out.println(Arrays.toString(finalArray));
     }
 }

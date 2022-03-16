@@ -1,4 +1,4 @@
-package com.sparta.ss.binarytree;
+package com.sparta.ss.sorters.binarytree;
 
 import java.util.Arrays;
 import java.util.Random;

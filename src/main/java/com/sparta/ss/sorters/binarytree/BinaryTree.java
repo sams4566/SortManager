@@ -1,4 +1,4 @@
-package com.sparta.ss.binarytree;
+package com.sparta.ss.sorters.binarytree;
 
 public class BinaryTree {
     public final Node rootNode;

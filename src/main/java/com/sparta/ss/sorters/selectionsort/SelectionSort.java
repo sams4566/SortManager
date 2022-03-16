@@ -1,4 +1,4 @@
-package com.sparta.ss.selectionsort;
+package com.sparta.ss.sorters.selectionsort;
 
 public class SelectionSort {
     public static int[] selectionSortArray(int[] numbers, int max) {

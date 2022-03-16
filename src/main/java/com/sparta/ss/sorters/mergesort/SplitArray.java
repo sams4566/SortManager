@@ -1,4 +1,4 @@
-package com.sparta.ss.mergesort;
+package com.sparta.ss.sorters.mergesort;
 
 import java.util.Arrays;
 

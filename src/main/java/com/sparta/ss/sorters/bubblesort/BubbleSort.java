@@ -1,10 +1,12 @@
-package com.sparta.ss.bubblesort;
+package com.sparta.ss.sorters.bubblesort;
+
+import com.sparta.ss.sorters.Algorithm;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class BubbleSort {
+public class BubbleSort implements Algorithm {
     static void bubbleSort(int[] numbers) {
         int len = numbers.length;
         int a = 0;
@@ -19,15 +21,9 @@ public class BubbleSort {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int scanned = sc.nextInt();
-        int[] numbers = new int[scanned];
-        Random random = new Random();
-        for (int i = 0; i < scanned; i++) {
-            numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
-        }
+    public int[] sortNumbers(int[] numbers) {
         bubbleSort(numbers);
-        System.out.println(Arrays.toString(numbers));
+//        System.out.println(Arrays.toString(numbers));
+        return numbers;
     }
 }

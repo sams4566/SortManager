@@ -1,4 +1,4 @@
-package com.sparta.ss.selectionsort;
+package com.sparta.ss.sorters.selectionsort;
 
 import java.util.Arrays;
 import java.util.Random;

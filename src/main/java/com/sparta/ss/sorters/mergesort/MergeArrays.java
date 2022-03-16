@@ -1,4 +1,4 @@
-package com.sparta.ss.mergesort;
+package com.sparta.ss.sorters.mergesort;
 
 public class MergeArrays {
     static int[] mergedArray(int[] numbers1, int[] numbers2) {
