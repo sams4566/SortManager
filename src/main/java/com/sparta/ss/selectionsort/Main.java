@@ -1,4 +1,4 @@
-package com.sparta.ss.quicksort;
+package com.sparta.ss.selectionsort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -15,7 +15,7 @@ public class Main {
         }
         int len = numbers.length;
         System.out.println(Arrays.toString(numbers));
-        int[] finalArray = QuickSort.quickSortArray(numbers, 0, len - 1);
+        int[] finalArray = SelectionSort.selectionSortArray(numbers, len);
         System.out.println(Arrays.toString(finalArray));
     }
 }

@@ -8,10 +8,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int scanned = sc.nextInt();
-        BinaryTree tree = new BinaryTree(500);
+        BinaryTree tree = new BinaryTree(0);
         Random random = new Random();
         for (int i = 0; i < scanned - 1; i++) {
-            int rand = random.nextInt(1000);
+            int rand = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
             tree.addElement(rand);
         }
         Node root = tree.rootNode;

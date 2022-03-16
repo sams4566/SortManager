@@ -25,7 +25,7 @@ public class BubbleSort {
         int[] numbers = new int[scanned];
         Random random = new Random();
         for (int i = 0; i < scanned; i++) {
-            numbers[i] = random.nextInt(1000);
+            numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
         }
         bubbleSort(numbers);
         System.out.println(Arrays.toString(numbers));
