@@ -1,6 +1,8 @@
 package com.sparta.ss.sorters.quicksort;
 
-public class QuickSort {
+import com.sparta.ss.sorters.Algorithm;
+
+public class QuickSort implements Algorithm {
     public static int[] quickSortArray(int[] numbers, int min, int max) {
         if (min < max) {
             int pivot = splitArray(numbers, min, max);
@@ -25,5 +27,12 @@ public class QuickSort {
         numbers[max] = numbers[k + 1];
         numbers[k + 1] = x;
         return (k + 1);
+    }
+
+    public int[] sortNumbers(int[] numbers) {
+        System.out.println("Quick Sort");
+        int len = numbers.length;
+        quickSortArray(numbers, 0, len - 1);
+        return numbers;
     }
 }

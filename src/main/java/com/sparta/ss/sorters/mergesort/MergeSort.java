@@ -1,7 +1,27 @@
 package com.sparta.ss.sorters.mergesort;
 
-public class MergeArrays {
-    static int[] mergedArray(int[] numbers1, int[] numbers2) {
+import com.sparta.ss.sorters.Algorithm;
+
+import java.util.Arrays;
+
+public class MergeSort implements Algorithm {
+    public static int[] splitMergeSort(int[] numbers) {
+        int[] numbers1 = new int[numbers.length/2];
+        int[] numbers2 = new int[numbers.length - numbers.length/2];
+        if (numbers.length == 1) {
+            return numbers;
+        } else {
+            for (int i = 0; i < numbers.length/2; i++) {
+                numbers1[i] = numbers[i];
+            }
+            for (int i = numbers.length/2; i < numbers.length; i++) {
+                numbers2[i - numbers.length/2] = numbers[i];
+            }
+        }
+        return mergedArray(splitMergeSort(numbers1), splitMergeSort(numbers2));
+    }
+
+    public static int[] mergedArray(int[] numbers1, int[] numbers2) {
         int array1 = 0;
         int array2 = 0;
         int array3 = 0;
@@ -38,5 +58,11 @@ public class MergeArrays {
             }
         }
         return list;
+    }
+
+    public int[] sortNumbers(int[] numbers) {
+        System.out.println("Merge Sort");
+        int[] sortedArray = splitMergeSort(numbers);
+        return sortedArray;
     }
 }

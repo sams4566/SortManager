@@ -1,7 +1,12 @@
 package com.sparta.ss.start;
 
 import com.sparta.ss.sorters.Algorithm;
+import com.sparta.ss.sorters.binarytree.BinaryTreeMain;
 import com.sparta.ss.sorters.bubblesort.BubbleSort;
+import com.sparta.ss.sorters.insertionsort.InsertionSort;
+import com.sparta.ss.sorters.mergesort.MergeSort;
+import com.sparta.ss.sorters.quicksort.QuickSort;
+import com.sparta.ss.sorters.selectionsort.SelectionSort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -29,6 +34,19 @@ public class Start {
     }
 
     public static Algorithm chooseAlgorithm(int chosenSorter) {
-        return new BubbleSort();
+        switch (chosenSorter) {
+            case 1:
+                return new BubbleSort();
+            case 2:
+                return new SelectionSort();
+            case 3:
+                return new QuickSort();
+            case 4:
+                return new MergeSort();
+            case 5:
+                return new BinaryTreeMain();
+            default:
+                return new InsertionSort();
+        }
     }
 }
