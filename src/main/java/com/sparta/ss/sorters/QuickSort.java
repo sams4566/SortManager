@@ -1,4 +1,4 @@
-package com.sparta.ss.sorters.quicksort;
+package com.sparta.ss.sorters;
 
 import com.sparta.ss.sorters.Algorithm;
 

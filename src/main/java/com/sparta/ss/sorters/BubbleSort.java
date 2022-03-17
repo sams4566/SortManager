@@ -1,4 +1,4 @@
-package com.sparta.ss.sorters.bubblesort;
+package com.sparta.ss.sorters;
 
 import com.sparta.ss.sorters.Algorithm;
 

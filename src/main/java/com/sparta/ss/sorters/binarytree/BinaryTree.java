@@ -1,18 +1,34 @@
 package com.sparta.ss.sorters.binarytree;
 
-public class BinaryTree {
-    public final Node rootNode;
-    public static int counter = 0;
+import com.sparta.ss.exceptions.ChildNotFoundException;
+
+public class BinaryTree implements BinaryTreeInterface {
+    private final Node rootNode;
+    private static int counter = 0;
+    private static int numOfNodes = 0;
 
     public BinaryTree(final int element) {
         rootNode = new Node(element);
     }
 
     public void addElement(final int element) {
+        numOfNodes++;
         addNodeToTree(rootNode, element);
     }
 
-    private void addNodeToTree(Node node, int element) {
+    public int getRootElement(){
+        int root = rootNode.getValue();
+        return root;
+    }
+
+    public int getNumberOfElements() {
+        return numOfNodes;
+    }
+
+    public void addElements(final int[] elements){}
+
+    public void addNodeToTree(Node node, int element) {
+
         if (element <= node.getValue()) {
             if (node.isLeftChildEmpty()) {
                 Node leftChild = new Node(element);
@@ -53,14 +69,92 @@ public class BinaryTree {
         return null;
     }
 
-    public static int[] inOrder(Node node, int[] order) {
+    public int[] getSortedTreeAsc() {
+        int[] order = new int[numOfNodes + 1];
+        inOrderAsc(rootNode, order);
+        return order;
+    }
+
+    public static int[] inOrderAsc(Node node, int[] order) {
         if (node == null) {
             return null;
         }
-        inOrder(node.getLeftChild(), order);
+        inOrderAsc(node.getLeftChild(), order);
         order[counter] = node.getValue();
         counter++;
-        inOrder(node.getRightChild(), order);
+        inOrderAsc(node.getRightChild(), order);
         return order;
+    }
+
+    public int[] getSortedTreeDesc() {
+        int[] order = new int[numOfNodes + 1];
+        inOrderDesc(rootNode, order);
+        return order;
+    }
+
+    public static int[] inOrderDesc(Node node, int[] order) {
+        if (node == null) {
+            return null;
+        }
+        inOrderDesc(node.getLeftChild(), order);
+        order[numOfNodes - counter] = node.getValue();
+        counter++;
+        inOrderDesc(node.getRightChild(), order);
+        return order;
+    }
+
+    public int getLeftChild(int element) throws ChildNotFoundException {
+        return element;
+    }
+
+    public int getRightChild(int element) throws ChildNotFoundException {
+        return element;
+    }
+
+    public static class Node {
+
+        private final int value;
+        Node leftChild;
+        Node rightChild;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public Node getLeftChild() {
+            return leftChild;
+        }
+
+        public void setLeftChild(Node leftChild) {
+            this.leftChild = leftChild;
+        }
+
+        public Node getRightChild() {
+            return rightChild;
+        }
+
+        public void setRightChild(Node rightChild) {
+            this.rightChild = rightChild;
+        }
+
+        public boolean isLeftChildEmpty() {
+            if (leftChild == null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public boolean isRightChildEmpty() {
+            if (rightChild == null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
