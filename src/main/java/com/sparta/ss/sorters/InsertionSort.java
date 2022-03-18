@@ -18,7 +18,6 @@ public class InsertionSort implements Algorithm {
     }
 
     public int[] sortNumbers(int[] numbers) {
-        System.out.println("Insertion Sort");
         sortArray(numbers);
         return numbers;
     }

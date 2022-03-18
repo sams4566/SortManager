@@ -3,7 +3,7 @@ package com.sparta.ss.sorters;
 import com.sparta.ss.sorters.Algorithm;
 
 public class BubbleSort implements Algorithm {
-    static void bubbleSort(int[] numbers) {
+    static int[] bubbleSort(int[] numbers) {
         int len = numbers.length;
         int a = 0;
         for (int i = 0; i < len; i++) {
@@ -15,11 +15,11 @@ public class BubbleSort implements Algorithm {
                 }
             }
         }
+        return numbers;
     }
 
     public int[] sortNumbers(int[] numbers) {
-        System.out.println("Bubble Sort");
-        bubbleSort(numbers);
-        return numbers;
+        int[] finalArray = bubbleSort(numbers);
+        return finalArray;
     }
 }

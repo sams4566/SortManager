@@ -61,7 +61,6 @@ public class MergeSort implements Algorithm {
     }
 
     public int[] sortNumbers(int[] numbers) {
-        System.out.println("Merge Sort");
         int[] sortedArray = splitMergeSort(numbers);
         return sortedArray;
     }

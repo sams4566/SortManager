@@ -19,7 +19,6 @@ public class SelectionSort implements Algorithm {
     }
 
     public int[] sortNumbers(int[] numbers) {
-        System.out.println("Selection Sort");
         int len = numbers.length;
         selectionSortArray(numbers, len);
         return numbers;

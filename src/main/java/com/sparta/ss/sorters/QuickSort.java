@@ -30,7 +30,6 @@ public class QuickSort implements Algorithm {
     }
 
     public int[] sortNumbers(int[] numbers) {
-        System.out.println("Quick Sort");
         int len = numbers.length;
         quickSortArray(numbers, 0, len - 1);
         return numbers;

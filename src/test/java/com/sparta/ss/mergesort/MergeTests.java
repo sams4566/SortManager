@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class MergeSortTests {
+public class MergeTests {
     @Test
     @DisplayName("Test correct array returned")
     void testCorrectArrayReturned() {
