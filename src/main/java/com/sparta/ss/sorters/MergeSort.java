@@ -2,8 +2,6 @@ package com.sparta.ss.sorters;
 
 import com.sparta.ss.sorters.Algorithm;
 
-import java.util.Arrays;
-
 public class MergeSort implements Algorithm {
     public static int[] splitMergeSort(int[] numbers) {
         int[] numbers1 = new int[numbers.length/2];
@@ -27,9 +25,9 @@ public class MergeSort implements Algorithm {
         int array3 = 0;
         int length1 = numbers1.length;
         int length2 = numbers2.length;
-        int lengthlist = numbers1.length + numbers2.length;
-        int[] list = new int[lengthlist];
-        while (array3 < lengthlist) {
+        int lengthList = numbers1.length + numbers2.length;
+        int[] list = new int[lengthList];
+        while (array3 < lengthList) {
             if (array1 == length1) {
                 list[array3] = numbers2[array2];
                 array2++;

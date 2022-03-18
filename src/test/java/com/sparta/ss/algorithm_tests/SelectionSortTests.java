@@ -1,5 +1,6 @@
-package com.sparta.ss.mergesort;
+package com.sparta.ss.algorithm_tests;
 
+import com.sparta.ss.exceptions.SwitchStatementException;
 import com.sparta.ss.sorters.Algorithm;
 import com.sparta.ss.start.Start;
 import org.junit.jupiter.api.Assertions;
@@ -11,13 +12,16 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class QuickSortTests {
+public class SelectionSortTests {
     private static Algorithm algorithm;
 
     @BeforeAll
     public static void setAlgorithm() {
-        algorithm = Start.chooseAlgorithm(5);
-        System.out.println("Algorithm selected for testing");
+        try {
+            algorithm = Start.chooseAlgorithm(6);
+        } catch (SwitchStatementException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Test

@@ -1,7 +1,14 @@
 package com.sparta.ss.exceptions;
 
-public class SwitchStatementException {
+public class SwitchStatementException extends Exception {
+    private final String message;
+
+    public SwitchStatementException(String message) {
+        this.message = message;
+    }
+
+    @Override
     public String getMessage() {
-        return "Invalid entry, please chose a number between 1 - 6";
+        return message;
     }
 }

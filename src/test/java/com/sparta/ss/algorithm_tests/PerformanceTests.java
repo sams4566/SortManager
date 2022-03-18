@@ -1,4 +1,4 @@
-package com.sparta.ss.mergesort;
+package com.sparta.ss.algorithm_tests;
 
 import com.sparta.ss.sorters.*;
 import com.sparta.ss.sorters.binarytree.BinaryTree;
