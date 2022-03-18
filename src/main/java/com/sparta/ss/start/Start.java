@@ -33,7 +33,7 @@ public class Start {
         int[] numbers = new int[scanned];
         Random random = new Random();
         for (int i = 0; i < scanned; i++) {
-            numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? -1 : 1);
+            numbers[i] = random.nextInt(1000) * (random.nextBoolean() ? 1 : -1);
         }
         if (chosenSorter != 1) {
             if (chosenSorter == 2) {

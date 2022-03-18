@@ -4,7 +4,7 @@ import com.sparta.ss.exceptions.ChildNotFoundException;
 
 public class BinaryTree implements BinaryTreeInterface {
     private final Node rootNode;
-    private static int counter = 0;
+    private int counter = 0;
     private static int numOfNodes = 0;
 
     public BinaryTree(final int element) {
@@ -75,7 +75,7 @@ public class BinaryTree implements BinaryTreeInterface {
         return order;
     }
 
-    public static int[] inOrderAsc(Node node, int[] order) {
+    private int[] inOrderAsc(Node node, int[] order) {
         if (node == null) {
             return null;
         }
@@ -92,7 +92,7 @@ public class BinaryTree implements BinaryTreeInterface {
         return order;
     }
 
-    public static int[] inOrderDesc(Node node, int[] order) {
+    private int[] inOrderDesc(Node node, int[] order) {
         if (node == null) {
             return null;
         }
