@@ -1,22 +1,22 @@
 package com.sparta.ss.mergesort;
 
 import com.sparta.ss.sorters.Algorithm;
-import com.sparta.ss.sorters.MergeSort;
 import com.sparta.ss.start.Start;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.Random;
 
-import static com.sparta.ss.start.Start.chooseAlgorithm;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AlgorithmTests {
+public class SelectionSortTests {
     private static Algorithm algorithm;
 
     @BeforeAll
     public static void setAlgorithm() {
-        algorithm = Start.chooseAlgorithm(2);
+        algorithm = Start.chooseAlgorithm(6);
         System.out.println("Algorithm selected for testing");
     }
 
@@ -74,26 +74,3 @@ public class AlgorithmTests {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

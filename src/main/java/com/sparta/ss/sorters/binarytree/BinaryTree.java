@@ -5,7 +5,7 @@ import com.sparta.ss.exceptions.ChildNotFoundException;
 public class BinaryTree implements BinaryTreeInterface {
     private final Node rootNode;
     private int counter = 0;
-    private static int numOfNodes = 0;
+    private int numOfNodes = 0;
 
     public BinaryTree(final int element) {
         rootNode = new Node(element);
